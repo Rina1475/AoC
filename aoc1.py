@@ -5,10 +5,13 @@ try it on number 100756 and 1969
 
 import math
 
-module = 1
+sum = 0
 
-mass = 1969
+file = open("input.txt", "r")
+for line in file:
+    line.strip()
+    sum += (math.floor(int(line.strip())/3.) - 2)
 
-fuel = math.floor(mass/3.) - 2
+print(sum)
 
-print(fuel)
+file.close()
