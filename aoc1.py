@@ -1,17 +1,16 @@
 """
-try it on number 100756 and 1969
+One small step for man, one giant leap for Malina
 
 """
 
-import math
-
-sum = 0
+fuel = 0
 
 file = open("input.txt", "r")
-for line in file:
-    line.strip()
-    sum += (math.floor(int(line.strip())/3.) - 2)
 
-print(sum)
+for line in file:
+    mass = int(line)
+    fuel += (mass//3 - 2)
+
+print(fuel)
 
 file.close()
